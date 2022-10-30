@@ -15,11 +15,11 @@ connectMongoDB();
 const dominiosPermitidos = [process.env.FRONTEND_URL];
 
 const corsOptions = {
-    origin: function(origin, callback){
-        if(dominiosPermitidos.indexOf(origin) !== -1){
-           //Origin is allowed
+    origin: function (origin, callback) {
+        if (dominiosPermitidos.indexOf(origin) !== -1) {
+            //Origin is allowed
             callback(null, true);
-        }else{
+        } else {
             callback(new Error('Not allowed by CORS'));
         }
     }
@@ -31,7 +31,7 @@ app.use(express.json());
 
 //routes
 app.use('/api/veterinario', veterinario);
-app.use('/api/paciente', paciente);
+app.use('/api/pacientes', paciente);
 
 //middleware
 

@@ -8,19 +8,22 @@ const VeterinarioSchema = Schema({
     name: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        message: 'El nombre es obligatorio'
     },
     password: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        message: 'La contraseña es obligatoria'
     },
     email: {
         type: String,
         required: true,
         unique: true,
         email: true,
-        trim: true
+        trim: true,
+        message: 'El email es obligatorio'
     },
     phone: {
         type: String,

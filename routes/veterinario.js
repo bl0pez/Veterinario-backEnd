@@ -17,7 +17,7 @@ router.route('/recovery-password/:token').get(checkToken).post(newPassword);
 
 router.get('/confirm/:token', confirmEmail); 
 
-//rutas de usuario
+//rutas privadas
 router.get('/profile', checkAuth , profile);
 router.put('/profile/:id', checkAuth, put_profile);
 router.put('/password', checkAuth, put_password);

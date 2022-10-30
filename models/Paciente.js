@@ -4,16 +4,20 @@ const { Schema, model } = pkg;
 const PacienteSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        minlength: 3,
+        message: 'El nombre es obligatorio'
     },
     owner: {
         type: String,
-        required: true
+        required: true,
+        message: 'El nombre del dueño es obligatorio'
     },
     email: {
         type: String,
         email: true,
-        required: true
+        required: true,
+        message: 'El email es obligatorio'
     },
     date: {
         type: Date,
@@ -22,7 +26,8 @@ const PacienteSchema = new Schema({
     },
     symptom: {
         type: String,
-        required: true
+        required: true,
+        message: 'Los síntomas son obligatorios'
     },
     veterinary: {
         type: Schema.Types.ObjectId,
