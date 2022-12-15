@@ -12,21 +12,11 @@ const app = express();
 
 connectMongoDB();
 
-const dominiosPermitidos = [process.env.FRONTEND_URL];
-console.log(dominiosPermitidos);
+console.log(process.env.FRONTEND_URL);
 
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (dominiosPermitidos.indexOf(origin) !== -1) {
-            //Origin is allowed
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}
-
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: [process.env.FRONTEND_URL]
+}));
 
 app.use(express.json());
 
