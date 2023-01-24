@@ -138,4 +138,4 @@ npm i
 
 <hr>
 
-<img src="https://raw.githubusercontent.com/bl0pez/backend-Veterinario/master/preview.png alt="1" width="100%"/>
+<img src="https://raw.githubusercontent.com/bl0pez/Veterinario-backEnd/master/preview.png" alt="1" width="100%"/>
